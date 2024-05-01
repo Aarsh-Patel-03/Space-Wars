@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="playground.css">
+    <link rel="stylesheet" href="fireworks.css">
+    <title>Space Wars</title>
+</head>
+<body onload="">
+  <audio id="myAudio">
+    <source src="./assets/themeSound.mp3" type="audio/mp3">
+  </audio>
+  <audio id="hero-shoot-sound">
+    <source src="./assets/blaster-2.mp3" type="audio/mp3">
+  </audio>
+  <audio id="button-sound">
+    <source src="./assets/buttons-click.mp3" type="audio/mp3">
+  </audio>
+  <audio id="fireworks-sound">
+    <source src="./assets/firework.mp3" type="audio/mp3">
+  </audio>
+  <audio id="game-over-sound">
+    <source src="./assets/game-over.mp3" type="audio/mp3">
+  </audio>
+  <audio id="damage-sound">
+    <source src="./assets/damage.mp3" type="audio/mp3">
+  </audio>
+    <div class="container centered-div" id="main-frame">
+      <div class="home" id="home">
+        <div class="title">
+          <img src="./assets/title.png" alt="SPACE WARS">
+        </div>
+        <div class="buttons-container">
+            <button class="buttons" id="play" onclick="play()">Play</button>
+          <button class="buttons" id="about" onclick="showAbout()">About</button>
+          <button class="buttons" id="sound" onclick="toggleAudio()">Sound</button>
+        </div>
+      </div>
+      <div class="play-ground" id="play-ground" data-value="0">
+        <button id="home-btn" class="buttons" data-permanent="true" onclick="goToHome()">Home</button>
+        <button id="total-bullets" class="buttons" data-permanent="true">00</button>
+        <button id="level-btn" class="buttons" data-permanent="true" onclick="selectLevel()">Level</button>
+        <div class="difficulty-level" id="difficultyLevel" data-permanent="true">
+          <button class="buttons" id="easy" value="1" data-permanent="true" onclick="setDifficulty(this)" >easy</button>
+          <button class="buttons" id="medium" value="2" data-permanent="true" onclick="setDifficulty(this)">medium</button>
+          <button class="buttons" id="hard" value="3" data-permanent="true" onclick="setDifficulty(this)">hard</button>
+        </div>
+      </div>
+      <div class="about-game" id="about-game">
+        <button id="home-btn" class="buttons" onclick="goToHome()">Home</button>
+        <div class="instructions" id="about-section">
+          <h2>How to Play</h2>
+    <p>
+        Welcome to "SPACE WARS" – an exciting and challenging adventure where you defend your territory against the relentless pirate fleet. Take control of your plane, navigate the skies, and unleash a storm of bullets to protect your homeland.
+    </p>
+    <p>
+        <strong>Controls:</strong>
+        <br>
+        Desktop: Use the arrow keys to move left and right. Press the spacebar to shoot bullets.
+        <br>
+        Mobile: Swipe left or right to move your plane. Tap on your plane to shoot bullets.
+    </p>
+    <p>
+        Your mission is to eliminate all enemy pirates and achieve victory. Keep an eye on your bullet count and use power-ups strategically.
+    </p>
+    <p>
+        Good luck, Commander! Defend with honor.
+    </p>
+    <p>
+      <strong>Developer:</strong>
+      <br>
+        <img src="./assets/me.jpg" alt="" class="profile"/>
+        <br>
+        Aarsh Patel
+        <br>
+        <br>
+        <br>
+  </p>
+        </div>
+      </div>
+    </div>
+    <script src="events.js"></script>
+    <script src="planeControls.js"></script>
+    <script src="mobileControls.js"></script>
+</body>
+</html>

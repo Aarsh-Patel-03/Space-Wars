@@ -1,0 +1,67 @@
+.plane {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('./assets/plane.png');
+    background-size: contain;
+  }
+  .bullet{
+    width:10px;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    background-color: yellow;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.pirate{
+    width:100px;
+    height:100px;
+    background-image: url('./assets/pirate.png');
+    background-size: contain;
+    display: flex;
+    position: absolute;
+    top: 50px;
+}
+.pirateBullet{
+  width:10px;
+  height: 20px;
+  position: absolute;
+  display: flex;
+  background-color: blue;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.enemy-power-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.power-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: green;
+}
+
+.difficulty-level{
+  position: absolute;
+  flex-direction: column;
+  gap: 10px;
+  top: 80px;
+  right: 20px;
+  display: none;
+}
